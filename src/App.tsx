@@ -1,15 +1,39 @@
 import Header from "./components/Header";
 import { Toolbar } from "./components/Toolbar";
 import { handleToolbarAction } from "./actions";
-import { TabBar } from "./components/TabBar";
 import { useCallback, useState } from "react";
 import { SpreadsheetTable } from "./components/SpreadSheetTable";
 import type { Column, Task } from "./types";
 import { initialColumns, mockTasks } from "./data/mockData";
+const columnGroups = [
+  {
+    id: "overview",
+    label: "Q3 Financial Overview",
+    color: "#FEEBC8",
+    columnIds: ["jobRequest", "submitted", "status", "submitter","url"],
+  },
+  {
+    id: "abc",
+    label: "ABC",
+    color: "#E9D8FD",
+    columnIds: ["assigned"],
+  },
+  {
+    id: "question",
+    label: "Answer a question",
+    color: "#E9D8FD",
+    columnIds: ["priority", "dueDate"],
+  },
+  {
+    id: "extract",
+    label: "Extract",
+    color: "#FED7D7",
+    columnIds: ["estValue"],
+  },
+];
 
 export const App = () => {
 
-  const [activeTab, setActiveTab] = useState("overview");
   const [tasks, setTasks] = useState<Task[]>(mockTasks);
   const [columns] = useState<Column[]>(initialColumns);
   const [selectedCell, setSelectedCell] = useState<{
@@ -64,10 +88,11 @@ export const App = () => {
         onShare={() => handleToolbarAction("Share")}
         onNewAction={() => handleToolbarAction("New Action")}
       />
-      <TabBar activeTab={activeTab} onTabChange={setActiveTab} />
+      {/* <TabBar activeTab={activeTab} onTabChange={setActiveTab} /> */}
       <SpreadsheetTable
         tasks={tasks}
         columns={columns}
+        columnGroups={columnGroups}
         selectedCell={selectedCell}
         editingCell={editingCell}
         onCellSelect={handleCellSelect}
