@@ -1,8 +1,11 @@
 import Header from "./components/Header"
 import { Toolbar } from "./components/Toolbar"
 import { handleToolbarAction } from "./actions";
-export const App = () => {
+import { TabBar } from "./components/TabBar";
+import { useState } from "react";
 
+export const App = () => {
+  const [activeTab, setActiveTab] = useState('overview');
 
   return (
     <div className="flex flex-col h-screen bg-gray-100">
@@ -17,6 +20,8 @@ export const App = () => {
         onShare={() => handleToolbarAction('Share')}
         onNewAction={() => handleToolbarAction('New Action')}
       />  
+    <TabBar activeTab={activeTab} onTabChange={setActiveTab} />
+
   </div>
   )
 }
