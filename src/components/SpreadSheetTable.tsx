@@ -1,7 +1,6 @@
 import type { Task,Column } from "../types";
 import { ChevronDown } from 'lucide-react';
 import { SpreadsheetCell } from "./SpreadSheetCell";
-import { useEffect } from "react";
 
 export const SpreadsheetTable: React.FC<{
   tasks: Task[];

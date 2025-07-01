@@ -1,12 +1,11 @@
 import React from "react";
 import { Search , Bell} from "lucide-react";
+import Panel from "../assets/Panel.svg"
 
 const Header: React.FC = () => (
   <div className="flex items-center justify-between p-3 bg-white border-b border-gray-200">
     <div className="flex items-center space-x-2">
-      <div className="w-6 h-5 bg-[#62866e] rounded relative">
-        <div className="absolute left-0.5 top-0.5 w-3 h-4 bg-white rounded-l-sm"></div>
-      </div>
+      <img src={Panel} alt="Panel" />
       <span className="text-sm text-gray-600">Workspace</span>
       <span className="text-gray-400">›</span>
       <span className="text-sm text-gray-600">Folder 2</span>
@@ -26,7 +25,7 @@ const Header: React.FC = () => (
       </div>
  <div className="relative">
         <Bell className="w-6 h-6 text-gray-800" />
-        <span className="absolute -top-2 -right-2 bg-green-700 text-white text-xs w-5 h-5 border-2 rounded-full flex items-center justify-center p-1">
+        <span className="absolute -top-2 -right-2 bg-[#4B6A4F] text-white text-xs w-5 h-5 border-2 rounded-full flex items-center justify-center p-1">
           2
         </span>
       </div>
