@@ -1,4 +1,4 @@
-import { ChevronDown, Search, Eye, EyeOff, ArrowUpDown, Filter, Grid3X3, Upload, Download, Share, Plus, MoreHorizontal } from 'lucide-react';
+import { ChevronDown, EyeOff, ArrowUpDown, Filter, Grid3X3, Upload, Download, Share, Plus } from 'lucide-react';
 export const Toolbar: React.FC<{
   onHideFields: () => void;
   onSort: () => void;
