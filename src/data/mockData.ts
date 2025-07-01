@@ -26,7 +26,42 @@ export const mockTasks: Task[] = [
     dueDate: "30-10-2024",
     estValue: "3,500,000"
   },
-  // ...other tasks
+  {
+    id: 3,
+    jobRequest: "Finalize user testing feedback for app...",
+    submitted: "05-12-2024",
+    status: "In-progress",
+    submitter: "Mark Johnson",
+    url: "www.markjohns...",
+    assigned: "Rachel Lee",
+    priority: "Medium",
+    dueDate: "10-12-2024",
+    estValue: "4,200,000"
+  },
+  {
+    id: 4,
+    jobRequest: "Design new features for the website",
+    submitted: "12-01-2025",
+    status: "Complete",
+    submitter: "Emily Green",
+    url: "www.emilygreen...",
+    assigned: "Tom Wright",
+    priority: "Low",
+    dueDate: "15-01-2025",
+    estValue: "5,900,000"
+  },
+  {
+    id: 5,
+    jobRequest: "Prepare financial report for Q4",
+    submitted: "25-01-2025",
+    status: "Blocked",
+    submitter: "Jessica Brown",
+    url: "www.jessicabro...",
+    assigned: "Kevin Smith",
+    priority: "Low",
+    dueDate: "30-01-2025",
+    estValue: "2,800,000"
+  }
 ];
 
 export const initialColumns: Column[] = [
