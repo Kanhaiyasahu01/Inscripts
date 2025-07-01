@@ -2,7 +2,7 @@ import Header from "./components/Header";
 import { Toolbar } from "./components/Toolbar";
 import { handleToolbarAction } from "./actions";
 import { TabBar } from "./components/TabBar";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 import { SpreadsheetTable } from "./components/SpreadSheetTable";
 import type { Column, Task } from "./types";
 import { initialColumns, mockTasks } from "./data/mockData";
@@ -11,7 +11,7 @@ export const App = () => {
 
   const [activeTab, setActiveTab] = useState("overview");
   const [tasks, setTasks] = useState<Task[]>(mockTasks);
-  const [columns, setColumns] = useState<Column[]>(initialColumns);
+  const [columns] = useState<Column[]>(initialColumns);
   const [selectedCell, setSelectedCell] = useState<{
     row: number;
     col: number;
@@ -76,5 +76,6 @@ export const App = () => {
         onCellEditEnd={handleCellEditEnd}
       />
     </div>
+    
   );
 };
